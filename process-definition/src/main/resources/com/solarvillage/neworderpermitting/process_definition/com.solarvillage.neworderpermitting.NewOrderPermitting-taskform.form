@@ -3,52 +3,49 @@
 <property name="name" value="com.solarvillage.neworderpermitting.NewOrderPermitting-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
-<field position="0" name="finalDecision" type="InputText" id="1772136617">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;finalDecision (finalDecision)quot;"/>
+<field position="1" name="newOrder_address" type="InputText" id="362740242">
+<property name="fieldRequired" value="true"/>
+<property name="groupWithPrevious" value="false"/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;address (newOrder)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="readonly" value="false"/>
-<property name="outputBinding" value="finalDecision"/>
-<property name="fieldClass" value="java.lang.String"/>
-</field>
-<field position="1" name="installationRequested" type="InputText" id="1410989267">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;installationRequested (installationRequested)quot;"/>
-<property name="readonly" value="false"/>
-<property name="outputBinding" value="installationRequested"/>
+<property name="isHTML" value="false"/>
+<property name="hideContent" value="false"/>
+<property name="outputBinding" value="newOrder/address"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
 <field position="3" name="newOrder_area" type="InputTextInteger" id="66111355">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;area (newOrder)quot;"/>
+<property name="fieldRequired" value="true"/>
+<property name="groupWithPrevious" value="false"/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;area (newOrder)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="readonly" value="false"/>
 <property name="outputBinding" value="newOrder/area"/>
 <property name="fieldClass" value="java.lang.Integer"/>
 </field>
-<field position="6" name="newOrder_price" type="InputTextInteger" id="953532718">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;price (newOrder)quot;"/>
+<field position="2" name="newOrder_installationType" type="InputText" id="1820197376">
+<property name="fieldRequired" value="true"/>
+<property name="groupWithPrevious" value="false"/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;installationType (newOrder)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="readonly" value="false"/>
-<property name="outputBinding" value="newOrder/price"/>
-<property name="fieldClass" value="java.lang.Integer"/>
-</field>
-<field position="2" name="newOrder_address" type="InputText" id="362740242">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;address (newOrder)quot;"/>
-<property name="readonly" value="false"/>
-<property name="outputBinding" value="newOrder/address"/>
-<property name="fieldClass" value="java.lang.String"/>
-</field>
-<field position="4" name="newOrder_installationType" type="InputText" id="1820197376">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;installationType (newOrder)quot;"/>
-<property name="readonly" value="false"/>
+<property name="isHTML" value="false"/>
+<property name="hideContent" value="false"/>
 <property name="outputBinding" value="newOrder/installationType"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
-<field position="5" name="newOrder_name" type="InputText" id="703208484">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;name (newOrder)quot;"/>
+<field position="0" name="newOrder_name" type="InputText" id="703208484">
+<property name="fieldRequired" value="true"/>
+<property name="groupWithPrevious" value="false"/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;name (newOrder)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="readonly" value="false"/>
+<property name="isHTML" value="false"/>
+<property name="hideContent" value="false"/>
 <property name="outputBinding" value="newOrder/name"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
