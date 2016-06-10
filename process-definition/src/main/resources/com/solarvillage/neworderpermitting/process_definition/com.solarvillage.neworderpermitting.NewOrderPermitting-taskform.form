@@ -1,0 +1,82 @@
+
+<form id="688741074">
+<property name="name" value="com.solarvillage.neworderpermitting.NewOrderPermitting-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="0" name="finalDecision" type="InputText" id="122942959">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;finalDecision (finalDecision)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="finalDecision"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="1" name="hoaMember" type="InputText" id="1230961816">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;hoaMember (hoaMember)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="hoaMember"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="2" name="installationRequested" type="InputText" id="230121626">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;installationRequested (installationRequested)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="installationRequested"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="3" name="installationType" type="InputText" id="785224174">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;installationType (installationType)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="installationType"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="4" name="name" type="InputText" id="1412934481">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;name (name)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="name"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="5" name="newOrder_address" type="InputText" id="1968755287">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;address (newOrder)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="newOrder/address"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="6" name="newOrder_area" type="InputTextInteger" id="737916254">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;area (newOrder)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="newOrder/area"/>
+<property name="fieldClass" value="java.lang.Integer"/>
+</field>
+<field position="7" name="newOrder_installationType" type="InputText" id="841599455">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;installationType (newOrder)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="newOrder/installationType"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="8" name="newOrder_name" type="InputText" id="1136853207">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;name (newOrder)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="newOrder/name"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="9" name="newOrder_price" type="InputTextInteger" id="1097390276">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;price (newOrder)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="newOrder/price"/>
+<property name="fieldClass" value="java.lang.Integer"/>
+</field>
+<dataHolder inputId="" name="#FBB767" type="basicType" outId="finalDecision" value="java.lang.String" id="finalDecision"/>
+<dataHolder inputId="" name="#9BCAFA" type="basicType" outId="hoaMember" value="java.lang.String" id="hoaMember"/>
+<dataHolder inputId="" name="#B29FE4" type="basicType" outId="installationRequested" value="java.lang.String" id="installationRequested"/>
+<dataHolder inputId="" name="#BBBBBB" type="basicType" outId="installationType" value="java.lang.String" id="installationType"/>
+<dataHolder inputId="" name="#E9E371" type="basicType" outId="name" value="java.lang.String" id="name"/>
+<dataHolder inputId="" name="#FF54A7" type="className" outId="newOrder" value="com.solarvillage.neworderpermitting.data_model.NewOrder" id="newOrder"/>
+</form>
