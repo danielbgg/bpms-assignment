@@ -1,0 +1,50 @@
+
+<form id="280000343">
+<property name="name" value="executiveMeeting-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="0" name="finalDecision" type="InputText" id="1997306926">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;_finalDecision (finalDecision)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="_finalDecision"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="1" name="newOrder_address" type="InputText" id="1566072385">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;address (newOrder)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="_newOrder/address"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="2" name="newOrder_area" type="InputTextInteger" id="2384500">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;area (newOrder)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="_newOrder/area"/>
+<property name="fieldClass" value="java.lang.Integer"/>
+</field>
+<field position="3" name="newOrder_installationType" type="InputText" id="877671733">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;installationType (newOrder)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="_newOrder/installationType"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="4" name="newOrder_name" type="InputText" id="276776781">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;name (newOrder)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="_newOrder/name"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="5" name="newOrder_price" type="InputTextInteger" id="452063408">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;price (newOrder)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="_newOrder/price"/>
+<property name="fieldClass" value="java.lang.Integer"/>
+</field>
+<dataHolder inputId="" name="#FBB767" type="basicType" outId="_finalDecision" value="java.lang.String" id="finalDecision"/>
+<dataHolder inputId="_newOrder" name="#FF54A7" type="className" outId="" value="com.solarvillage.neworderpermitting.data_model.NewOrder" id="newOrder"/>
+</form>
