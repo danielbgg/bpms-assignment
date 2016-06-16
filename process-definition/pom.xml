@@ -8,6 +8,13 @@
   <packaging>kjar</packaging>
   <name>process-definition</name>
   <description>New order permitting process definition</description>
+  <dependencies>
+    <dependency>
+      <groupId>com.solarvillage.neworderpermitting</groupId>
+      <artifactId>data-model</artifactId>
+      <version>0.1</version>
+    </dependency>
+  </dependencies>
   <repositories>
     <repository>
       <id>guvnor-m2-repo</id>
@@ -15,7 +22,6 @@
       <url>http://localhost:8080/business-central/maven2/</url>
     </repository>
   </repositories>
-  
   <build>
     <plugins>
       <plugin>
