@@ -1,28 +1,71 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>com.solarvillage.permit</groupId>
   <artifactId>permit-service</artifactId>
-  <version>0.1</version>
-  <packaging>kjar</packaging>
+  <version>1.0</version>
+  <packaging>war</packaging>
+
   <name>permit-service</name>
-  <description>Permit Services (Structural and Eletrical)</description>
-  <repositories>
-    <repository>
-      <id>guvnor-m2-repo</id>
-      <name>Guvnor M2 Repo</name>
-      <url>http://localhost:8080/business-central/maven2/</url>
-    </repository>
-  </repositories>
-  <build>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+
+    <dependency>
+        <groupId>org.jboss.resteasy</groupId>
+        <artifactId>resteasy-jaxrs</artifactId>
+        <version>3.0.6.Final</version>
+        <scope>provided</scope>
+    </dependency>
+    
+<dependency>
+	<groupId>org.jboss.resteasy</groupId>
+	<artifactId>resteasy-jackson-provider</artifactId>
+	<version>3.0.4.Final</version>
+</dependency>    
+        
+<dependency>
+	<groupId>com.solarvillage.neworderpermitting</groupId>
+	<artifactId>data-model</artifactId>
+	<version>0.1</version>
+</dependency>    
+                
+        
+  </dependencies>
+  
+<build>
     <plugins>
-      <plugin>
-        <groupId>org.kie</groupId>
-        <artifactId>kie-maven-plugin</artifactId>
-        <version>6.4.0.Final-redhat-3</version>
-        <extensions>true</extensions>
-      </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.7</source>
+                <target>1.7</target>
+            </configuration>
+        </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>2.3</version>
+            <configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+                <warName>permit</warName>
+            </configuration>
+        </plugin>
     </plugins>
-  </build>
+</build>  
+  
 </project>

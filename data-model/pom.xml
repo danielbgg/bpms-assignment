@@ -5,24 +5,6 @@
   <groupId>com.solarvillage.neworderpermitting</groupId>
   <artifactId>data-model</artifactId>
   <version>0.1</version>
-  <packaging>kjar</packaging>
   <name>data-model</name>
   <description>New order permitting data model</description>
-  <repositories>
-    <repository>
-      <id>guvnor-m2-repo</id>
-      <name>Guvnor M2 Repo</name>
-      <url>http://localhost:8080/business-central/maven2/</url>
-    </repository>
-  </repositories>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.kie</groupId>
-        <artifactId>kie-maven-plugin</artifactId>
-        <version>6.4.0.Final-redhat-3</version>
-        <extensions>true</extensions>
-      </plugin>
-    </plugins>
-  </build>
 </project>
