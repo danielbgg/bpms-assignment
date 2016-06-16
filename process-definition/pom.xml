@@ -15,6 +15,7 @@
       <url>http://localhost:8080/business-central/maven2/</url>
     </repository>
   </repositories>
+  
   <build>
     <plugins>
       <plugin>
