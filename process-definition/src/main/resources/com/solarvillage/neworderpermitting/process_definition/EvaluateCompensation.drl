@@ -10,11 +10,12 @@ rule "EvaluateCompensation"
     
     when
         //conditions
-        $order : NewOrder()
+        $order : NewOrder( (eletricalPermitResult && !structuralPermitResult) || (!eletricalPermitResult && structuralPermitResult) )
     then
         //actions
         System.out.println("Starting rule: " + kcontext.getRule().getName() + " - order: " + $order.toString());
-        modify($order) {setPrice($order.getArea() * 100)};
+        modify($order) {setCompensation(true)};
         System.out.println("Rule fired: " + kcontext.getRule().getName() + " - order: " + $order.toString());
 
 end
+
