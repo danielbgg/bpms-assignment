@@ -9,7 +9,7 @@ rule "EvaluateRequest"
 	lock-on-active 
 
     when
-        order : Order()
+        order : NewOrder()
     then
         modify(order) {
             setPrice(order.getArea() * 100);
