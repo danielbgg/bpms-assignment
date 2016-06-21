@@ -12,7 +12,7 @@ rule "EvaluateRequest"
         order : Order()
     then
         modify(order) {
-            setPrice(order.getArea * 100);
+            setPrice(order.getArea() * 100);
             System.out.println("Rule fired: " + kcontext.getRule().getName() + " - order: " + order.toString());
         }
     
