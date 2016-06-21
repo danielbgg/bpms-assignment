@@ -1,2 +1,16 @@
 package com.solarvillage.neworderpermitting.process_definition;
 
+import com.solarvillage.neworderpermitting.data_model.NewOrder;
+
+rule "EvaluateRequest"
+
+    when
+        order : Order()
+    then
+        modify(order) {
+            setPrice(order.getArea * 100);
+            System.out.println("Regra executada: " + kcontext.getRule().getName());
+        }
+    
+end
+    
