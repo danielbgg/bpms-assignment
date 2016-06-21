@@ -4,6 +4,10 @@ import com.solarvillage.neworderpermitting.data_model.NewOrder;
 
 rule "EvaluateRequest"
 
+	no-loop 
+	ruleflow-group "evaluate"
+	lock-on-active 
+
     when
         order : Order()
     then
