@@ -7,14 +7,12 @@ rule "EvaluateRequest"
 	no-loop 
 	ruleflow-group "evaluate"
 	lock-on-active 
-
+    
     when
-        order : NewOrder()
+        //conditions
+        $order : NewOrder()
     then
-        modify(order) {
-            setPrice(order.getArea() * 100);
-            System.out.println("Rule fired: " + kcontext.getRule().getName() + " - order: " + order.toString());
-        }
-    
+        //actions
+        modify($order) {setPrice(200)};
+
 end
-    
