@@ -10,7 +10,7 @@ rule "EvaluateCompensation"
     
     when
         //conditions
-        $order : NewOrder( (eletricalPermitResult && !structuralPermitResult) || (!eletricalPermitResult && structuralPermitResult) )
+        $order : NewOrder( (eletricalPermitResult && !structuralPermitResult) , (!eletricalPermitResult && structuralPermitResult) )
     then
         //actions
         System.out.println("Starting rule: " + kcontext.getRule().getName() + " - order: " + $order.toString());
