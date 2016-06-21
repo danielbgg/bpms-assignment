@@ -14,5 +14,6 @@ rule "EvaluateRequest"
     then
         //actions
         modify($order) {setPrice(200)};
+        System.out.println("Rule fired: " + kcontext.getRule().getName() + " - order: " + $order.toString());
 
 end
