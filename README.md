@@ -3,25 +3,25 @@ GPTE Red Hat BPMS Suite 6.3 Advanced Process Development Assignment
 
 Installation
 ============
-1. Download the [gpte-bpms-advanced-630.vdi](https://drive.google.com/open?id=0B8mmXW6hJKdiaVpndWxFV3Nmbkk) VirtualBox image
-2. Start VirtualBox and navigate to: Machine → New.
+* Download the [gpte-bpms-advanced-630.vdi](https://drive.google.com/open?id=0B8mmXW6hJKdiaVpndWxFV3Nmbkk) VirtualBox image
+* Start VirtualBox and navigate to: Machine → New.
 * In the Create Virtual Machine panel, populate its fields:
 * Name: gpte-bpms-advanced
 * Type: Linux
 * Version: Red Hat (64-bit)
-3. Click Next.
-4. In the Memory panel, specify 4096 MB of RAM and click Next.
-5. In the Hard Disk panel:
+* Click Next.
+* In the Memory panel, specify 4096 MB of RAM and click Next.
+* In the Hard Disk panel:
 * Select Use an existing virtual hard disk file.
 * Browse your hard drive and select the previously downloaded gpte-bpms-advanced-630.vdi image.
 * Click Create.
-6. Click Start.
+* Click Start.
 
 Configuration
 =============
-1. Create the following users:
-* sales1
-* executive1
+* Create the following users:
+** sales1
+** executive1
 
 2. With the following groups:
 * sales1=user,sales,kie-server,rest-all
