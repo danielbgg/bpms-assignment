@@ -1,0 +1,20 @@
+package com.solarvillage.neworderpermitting.process_definition;
+
+import com.solarvillage.neworderpermitting.data_model.NewOrder;
+
+rule "EvaluateRequest"
+
+	no-loop 
+	ruleflow-group "evaluate"
+	lock-on-active 
+    
+    when
+        //conditions
+        $order : NewOrder()
+    then
+        //actions
+        System.out.println("Starting rule: " + kcontext.getRule().getName() + " - order: " + $order.toString());
+        modify($order) {setPrice($order.getArea() * 100)};
+        System.out.println("Rule fired: " + kcontext.getRule().getName() + " - order: " + $order.toString());
+
+end
