@@ -12,6 +12,9 @@ public class NewOrder implements Serializable {
 	private String address;
 	private Integer area;
 	private Integer price;
+	private boolean eletricalPermitResult;
+	private boolean structuralPermitResult;
+	private boolean compensation = false;
 
 	public String getName() {
 		return name;
@@ -61,11 +64,39 @@ public class NewOrder implements Serializable {
 		this.price = price;
 	}
 
+	public boolean isEletricalPermitResult() {
+		return eletricalPermitResult;
+	}
+
+	public void setEletricalPermitResult(boolean eletricalPermitResult) {
+		this.eletricalPermitResult = eletricalPermitResult;
+	}
+
+	public boolean isStructuralPermitResult() {
+		return structuralPermitResult;
+	}
+
+	public void setStructuralPermitResult(boolean structuralPermitResult) {
+		this.structuralPermitResult = structuralPermitResult;
+	}
+
+	public boolean isCompensation() {
+		return compensation;
+	}
+
+	public void setCompensation(boolean compensation) {
+		this.compensation = compensation;
+	}
+
 	@Override
 	public String toString() {
 		return "NewOrder [name=" + name + ", installationType="
 				+ installationType + ", hoaMember=" + hoaMember + ", address="
-				+ address + ", area=" + area + ", price=" + price + "]";
+				+ address + ", area=" + area + ", price=" + price
+				+ ", eletricalPermitResult=" + eletricalPermitResult
+				+ ", structuralPermitResult=" + structuralPermitResult
+				+ ", compensation=" + compensation + "]";
 	}
+
 
 }
