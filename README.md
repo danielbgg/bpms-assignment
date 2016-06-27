@@ -5,37 +5,37 @@ Installation
 ============
 1. Download the [gpte-bpms-advanced-630.vdi](https://drive.google.com/open?id=0B8mmXW6hJKdiaVpndWxFV3Nmbkk) VirtualBox image
 2. Start VirtualBox and navigate to: Machine → New.
-- In the Create Virtual Machine panel, populate its fields:
-- Name: gpte-bpms-advanced
-- Type: Linux
-- Version: Red Hat (64-bit)
+* In the Create Virtual Machine panel, populate its fields:
+* Name: gpte-bpms-advanced
+* Type: Linux
+* Version: Red Hat (64-bit)
 3. Click Next.
 4. In the Memory panel, specify 4096 MB of RAM and click Next.
 5. In the Hard Disk panel:
-- Select Use an existing virtual hard disk file.
-- Browse your hard drive and select the previously downloaded gpte-bpms-advanced-630.vdi image.
-- Click Create.
+* Select Use an existing virtual hard disk file.
+* Browse your hard drive and select the previously downloaded gpte-bpms-advanced-630.vdi image.
+* Click Create.
 6. Click Start.
 
 Configuration
 =============
 1. Create the following users:
-- sales1
-- executive1
+* sales1
+* executive1
 
 2. With the following groups:
-- sales1=user,sales,kie-server,rest-all
-- executive1=user,executive,kie-server,rest-all
+* sales1=user,sales,kie-server,rest-all
+* executive1=user,executive,kie-server,rest-all
 
 Dependencies
 ============
 1. data-model
-- mvn clean package install
-- cp target/data-model-0.1.jar ~/lab/bpms/standalone/deployments/business-central.war/WEB-INF/lib
+* mvn clean package install
+* cp target/data-model-0.1.jar ~/lab/bpms/standalone/deployments/business-central.war/WEB-INF/lib
 
 2. permit-service
-- mvn clean package install
-- cp target/permit.war ~/lab/bpms/standalone/deployments
+* mvn clean package install
+* cp target/permit.war ~/lab/bpms/standalone/deployments
 
 Kie Server
 ==========
