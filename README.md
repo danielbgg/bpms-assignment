@@ -96,6 +96,11 @@ curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" -
 curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '{"_name":"Daniel", "_address":"Faria_lima", "_installationType":"residential", "_area":"100", "_hoaMember":"y"}' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/processes/com.solarvillage.neworderpermitting.NewOrderPermitting/instances
 ```
 
+* Signal for a meeting request with a sales representative (within 2 minutes after creating a HOA Member instance)
+```
+curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '"meetingRequest"' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_0_8/processes/instances/14/signal/meetingRequest
+```
+
 * Sales1: claim a task
 ```
 curl -X PUT -H "Accept: application/json" --user sales1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/claimed"
