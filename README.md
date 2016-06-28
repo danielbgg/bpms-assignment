@@ -56,42 +56,47 @@ Kie Server
 
 Commands
 ========
-* Non HOA Member
+* Start a Non HOA Member instance
 ```
 curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '{"_name":"Daniel", "_address":"Faria_lima", "_installationType":"residential", "_area":"100", "_hoaMember":"n"}' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/processes/com.solarvillage.neworderpermitting.NewOrderPermitting/instances
 ```
 
-* HOA Member
+* Start a HOA Member instance
 ```
 curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '{"_name":"Daniel", "_address":"Faria_lima", "_installationType":"residential", "_area":"100", "_hoaMember":"y"}' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/processes/com.solarvillage.neworderpermitting.NewOrderPermitting/instances
 ```
 
-* Sales1
+* Sales1: claim a task
 ```
 curl -X PUT -H "Accept: application/json" --user sales1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/claimed"
 ```
+* Sales1: start a task
 ```
 curl -X PUT -H "Accept: application/json" --user sales1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/started"
 ```
+* Sales1: complete a task
 ```
 curl -X PUT -H "Accept: application/json" -H "Content-Type: application/json" -d '{"_installationRequested":"n"}' --user sales1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/completed"
 ```
 
-* Executive1
+* Executive1: claim a task
 ```
 curl -X PUT -H "Accept: application/json" --user executive1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/claimed"
 ```
+* Executive1: start a task
 ```
 curl -X PUT -H "Accept: application/json" --user executive1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/started"
 ```
+* Executive1: complete a task
 ```
 curl -X PUT -H "Accept: application/json" -H "Content-Type: application/json" -d '{"_finalDecision":"n"}' --user executive1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/completed"
 ```
 
-* Groups
+* Groups: all tasks assigned for sales group
 ```
 curl -X GET -H "Accept: application/json" --user jboss:bpms "http://localhost:8080/kie-server/services/rest/server/queries/tasks/instances/pot-owners?groups=sales"
 ```
+* Groups: all tasks assigned for executive group
 ```
 curl -X GET -H "Accept: application/json" --user jboss:bpms "http://localhost:8080/kie-server/services/rest/server/queries/tasks/instances/pot-owners?groups=executive"
 ```
