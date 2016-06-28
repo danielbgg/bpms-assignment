@@ -1,0 +1,50 @@
+
+<form id="978724420">
+<property name="name" value="helloworld.HelloWorld-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="2" name="permitRequest_name" type="InputText" id="116249917">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;name (permitRequest)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="permitRequest/name"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="5" name="permitRequestResponse_name" type="InputText" id="1485293108">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;name (permitRequestResponse)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="permitRequestResponse/name"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="0" name="permitRequest_address" type="InputText" id="221606">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;address (permitRequest)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="permitRequest/address"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="1" name="permitRequest_approved" type="CheckBoxPrimitiveBoolean" id="610926380">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;approved (permitRequest)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="permitRequest/approved"/>
+<property name="fieldClass" value="boolean"/>
+</field>
+<field position="3" name="permitRequestResponse_address" type="InputText" id="188953124">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;address (permitRequestResponse)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="permitRequestResponse/address"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="4" name="permitRequestResponse_approved" type="CheckBoxPrimitiveBoolean" id="544324127">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;approved (permitRequestResponse)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="permitRequestResponse/approved"/>
+<property name="fieldClass" value="boolean"/>
+</field>
+<dataHolder inputId="" name="#E9E371" type="className" outId="permitRequest" value="com.solarvillage.neworderpermitting.data_model.PermitRequest" id="permitRequest"/>
+<dataHolder inputId="" name="#FF54A7" type="className" outId="permitRequestResponse" value="com.solarvillage.neworderpermitting.data_model.PermitRequest" id="permitRequestResponse"/>
+</form>
