@@ -17,8 +17,8 @@ Installation
 0. Click Create.
 0. Click Start.
 
-Configuration
-=============
+User Configuration
+==================
 * Create the following users:
 ```
 sales1
@@ -28,6 +28,36 @@ executive1
 ```
 sales1=user,sales,kie-server,rest-all
 executive1=user,executive,kie-server,rest-all
+```
+
+Email Configuration
+===================
+* Update the file: 
+```
+~/lab/bpms/standalone/deployments/kie-server.war/WEB-INF/classes/userinfo.properties
+```
+```
+sales1=sales1@acme.org:en-UK:sales1
+executive1=executive1@acme.org:en-UK:executive1
+```
+
+* Start SMTP:
+```
+cd ~/lab/simple-smtp
+$ ./simple-smtp
+```
+
+* Configure SMTP:
+```
+cd ~/lab/bpms/bin
+./jboss-cli.sh -c --controller=127.0.0.1:9999
+[standalone@127.0.0.1:9999] /system-property=org.kie.mail.session:add(value="java:jboss/mail/Default")
+[standalone@127.0.0.1:9999] /subsystem=mail/mail-session=default:write-attribute(name=from, value=bpms@acme.org)
+[standalone@127.0.0.1:9999] /subsystem=mail/mail-session=default/server=smtp:write-attribute(name=username,value=admin)
+[standalone@127.0.0.1:9999] /subsystem=mail/mail-session=default/server=smtp:write-attribute(name=password,value=password)
+[standalone@127.0.0.1:9999] /socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=mail-smtp:write-attribute(name=host,value=localhost)
+[standalone@127.0.0.1:9999] /socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=mail-smtp:write-attribute(name=port,value=2525)
+[standalone@127.0.0.1:9999] exit
 ```
 
 Dependencies
