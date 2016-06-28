@@ -19,12 +19,12 @@ Installation
 
 Configuration
 =============
-1. Create the following users:
+* Create the following users:
 ```
 sales1
 executive1
 ```
-2. With the following groups:
+* With the following groups:
 ```
 sales1=user,sales,kie-server,rest-all
 executive1=user,executive,kie-server,rest-all
@@ -32,12 +32,12 @@ executive1=user,executive,kie-server,rest-all
 
 Dependencies
 ============
-1. data-model
+* data-model
 ```
 mvn clean package install
 cp target/data-model-0.1.jar ~/lab/bpms/standalone/deployments/business-central.war/WEB-INF/lib
 ```
-2. permit-service
+* permit-service
 ```
 mvn clean package install
 cp target/permit.war ~/lab/bpms/standalone/deployments
@@ -56,17 +56,17 @@ Kie Server
 
 Commands
 ========
-1. Non HOA Member
+* Non HOA Member
 ```
 curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '{"_name":"Daniel", "_address":"Faria_lima", "_installationType":"residential", "_area":"100", "_hoaMember":"n"}' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/processes/com.solarvillage.neworderpermitting.NewOrderPermitting/instances
 ```
 
-2. HOA Member
+* HOA Member
 ```
 curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '{"_name":"Daniel", "_address":"Faria_lima", "_installationType":"residential", "_area":"100", "_hoaMember":"y"}' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/processes/com.solarvillage.neworderpermitting.NewOrderPermitting/instances
 ```
 
-2.1. Sales1
+* Sales1
 ```
 curl -X PUT -H "Accept: application/json" --user sales1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/claimed"
 ```
@@ -77,7 +77,7 @@ curl -X PUT -H "Accept: application/json" --user sales1:redhat@123 "http://local
 curl -X PUT -H "Accept: application/json" -H "Content-Type: application/json" -d '{"_installationRequested":"n"}' --user sales1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/completed"
 ```
 
-2.2. Executive1
+* Executive1
 ```
 curl -X PUT -H "Accept: application/json" --user executive1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/claimed"
 ```
@@ -88,7 +88,7 @@ curl -X PUT -H "Accept: application/json" --user executive1:redhat@123 "http://l
 curl -X PUT -H "Accept: application/json" -H "Content-Type: application/json" -d '{"_finalDecision":"n"}' --user executive1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/completed"
 ```
 
-3. Groups
+* Groups
 ```
 curl -X GET -H "Accept: application/json" --user jboss:bpms "http://localhost:8080/kie-server/services/rest/server/queries/tasks/instances/pot-owners?groups=sales"
 ```
