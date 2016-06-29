@@ -65,7 +65,7 @@ Dependencies
 * data-model
 ```
 mvn clean package install
-cp target/data-model-0.1.jar ~/lab/bpms/standalone/deployments/business-central.war/WEB-INF/lib
+cp target/data-model-1.0.jar ~/lab/bpms/standalone/deployments/business-central.war/WEB-INF/lib
 ```
 * permit-service
 ```
@@ -77,7 +77,7 @@ Kie Server
 ==========
 0. Deploy -> Rule Deployments
 0. Add Container
-0. Name: neworderpermitting_x_y
+0. Name: neworderpermitting_1_0
 0. Group Name: com.solarvillage.neworderpermitting
 0. Artifact Id: process-definition
 0. Version: x.y
@@ -88,43 +88,43 @@ Commands
 ========
 * Start a Non HOA Member instance
 ```
-curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '{"_name":"Daniel B. G. Goncalves", "_address":"Av. Brigadeiro Faria Lima, 3900 - Sao Paulo - Brazil", "_installationType":"residential", "_area":"100", "_hoaMember":"n"}' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_0_8/processes/com.solarvillage.neworderpermitting.NewOrderPermitting/instances
+curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '{"_name":"Daniel B. G. Goncalves", "_address":"Av. Brigadeiro Faria Lima, 3900 - Sao Paulo - Brazil", "_installationType":"residential", "_area":"100", "_hoaMember":"n"}' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_1_0/processes/com.solarvillage.neworderpermitting.NewOrderPermitting/instances
 ```
 
 * Start a HOA Member instance
 ```
-curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '{"_name":"Daniel B. G. Goncalves", "_address":"Av. Brigadeiro Faria Lima, 3900 - Sao Paulo - Brazil", "_installationType":"residential", "_area":"100", "_hoaMember":"y"}' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/processes/com.solarvillage.neworderpermitting.NewOrderPermitting/instances
+curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '{"_name":"Daniel B. G. Goncalves", "_address":"Av. Brigadeiro Faria Lima, 3900 - Sao Paulo - Brazil", "_installationType":"residential", "_area":"100", "_hoaMember":"y"}' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_1_0/processes/com.solarvillage.neworderpermitting.NewOrderPermitting/instances
 ```
 
 * Signal for a meeting request with a sales representative (within 2 minutes after creating a HOA Member instance)
 ```
-curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '"meetingRequest"' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/processes/instances/<ID>/signal/meetingRequest
+curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '"meetingRequest"' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_1_0/processes/instances/{id}/signal/meetingRequest
 ```
 
 * Sales1: claim a task
 ```
-curl -X PUT -H "Accept: application/json" --user sales1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/claimed"
+curl -X PUT -H "Accept: application/json" --user sales1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_1_0/tasks/{id}/states/claimed"
 ```
 * Sales1: start a task
 ```
-curl -X PUT -H "Accept: application/json" --user sales1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/started"
+curl -X PUT -H "Accept: application/json" --user sales1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_1_0/tasks/{id}/states/started"
 ```
 * Sales1: complete a task
 ```
-curl -X PUT -H "Accept: application/json" -H "Content-Type: application/json" -d '{"_installationRequested":"n"}' --user sales1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/completed"
+curl -X PUT -H "Accept: application/json" -H "Content-Type: application/json" -d '{"_installationRequested":"n"}' --user sales1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_1_0/tasks/{id}/states/completed"
 ```
 
 * Executive1: claim a task
 ```
-curl -X PUT -H "Accept: application/json" --user executive1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/claimed"
+curl -X PUT -H "Accept: application/json" --user executive1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_1_0/tasks/{id}/states/claimed"
 ```
 * Executive1: start a task
 ```
-curl -X PUT -H "Accept: application/json" --user executive1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/started"
+curl -X PUT -H "Accept: application/json" --user executive1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_1_0/tasks/{id}/states/started"
 ```
 * Executive1: complete a task
 ```
-curl -X PUT -H "Accept: application/json" -H "Content-Type: application/json" -d '{"_finalDecision":"n"}' --user executive1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/tasks/<ID>/states/completed"
+curl -X PUT -H "Accept: application/json" -H "Content-Type: application/json" -d '{"_finalDecision":"n"}' --user executive1:redhat@123 "http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_1_0/tasks/{id}/states/completed"
 ```
 
 * Groups: all tasks assigned for sales group
