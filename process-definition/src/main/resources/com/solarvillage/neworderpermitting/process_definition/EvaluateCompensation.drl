@@ -13,9 +13,9 @@ rule "EvaluateCompensation"
         $order : NewOrder((eletricalPermitResult == true && structuralPermitResult == false) || (eletricalPermitResult == false && structuralPermitResult == true))
     then
         //actions
-        System.out.println("Starting rule: " + kcontext.getRule().getName() + " - order: " + $order.toString());
+        System.out.println("Starting rule: " + kcontext.getRule().getName());
         modify($order) {setCompensation(true)};
-        System.out.println("Rule fired: " + kcontext.getRule().getName() + " - order: " + $order.toString());
+        System.out.println("Rule fired: " + kcontext.getRule().getName());
 
 end
 
