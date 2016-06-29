@@ -40,12 +40,6 @@
             <parameters/>
             <name>Rest</name>
         </work-item-handler>
-        <work-item-handler>
-            <resolver>mvel</resolver>
-            <identifier>new com.solarvillage.neworderpermitting.wih.RulesWorkItemHandler("com.solarvillage.neworderpermitting:process-definition:LATEST")</identifier>
-            <parameters/>
-            <name>Rules</name>
-        </work-item-handler>
     </work-item-handlers>
     <environment-entries/>
     <configurations/>
