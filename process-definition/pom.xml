@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.solarvillage.neworderpermitting</groupId>
   <artifactId>process-definition</artifactId>
-  <version>0.8</version>
+  <version>1.0</version>
   <packaging>kjar</packaging>
   <name>process-definition</name>
   <description>New order permitting process definition</description>
