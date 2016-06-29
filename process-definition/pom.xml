@@ -8,6 +8,9 @@
   <packaging>kjar</packaging>
   <name>process-definition</name>
   <description>New order permitting process definition</description>
+  <properties>
+    <version.bpms>6.4.0.Final-redhat-3</version.bpms>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>com.solarvillage.neworderpermitting</groupId>
