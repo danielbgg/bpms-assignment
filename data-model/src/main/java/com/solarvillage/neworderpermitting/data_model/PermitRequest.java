@@ -7,8 +7,9 @@ public class PermitRequest implements Serializable {
 	private final static long serialVersionUID = 2L;
 
 	private String name;
+	private String installationType;
 	private String address;
-	private boolean approved;
+	private Integer area;
 
 	public PermitRequest() {
 	}
@@ -21,6 +22,14 @@ public class PermitRequest implements Serializable {
 		this.name = name;
 	}
 
+	public String getInstallationType() {
+		return installationType;
+	}
+
+	public void setInstallationType(String installationType) {
+		this.installationType = installationType;
+	}
+
 	public String getAddress() {
 		return address;
 	}
@@ -29,18 +38,19 @@ public class PermitRequest implements Serializable {
 		this.address = address;
 	}
 
-	public boolean isApproved() {
-		return approved;
+	public Integer getArea() {
+		return area;
 	}
 
-	public void setApproved(boolean approved) {
-		this.approved = approved;
+	public void setArea(Integer area) {
+		this.area = area;
 	}
 
 	@Override
 	public String toString() {
-		return "PermitRequest [name=" + name + ", address=" + address
-				+ ", approved=" + approved + "]";
+		return "PermitRequest [name=" + name + ", installationType="
+				+ installationType + ", address=" + address + ", area=" + area
+				+ "]";
 	}
 
 }

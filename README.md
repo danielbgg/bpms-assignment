@@ -88,17 +88,17 @@ Commands
 ========
 * Start a Non HOA Member instance
 ```
-curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '{"_name":"Daniel", "_address":"Faria_lima", "_installationType":"residential", "_area":"100", "_hoaMember":"n"}' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/processes/com.solarvillage.neworderpermitting.NewOrderPermitting/instances
+curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '{"_name":"Daniel B. G. Goncalves", "_address":"Av. Brigadeiro Faria Lima, 3900 - Sao Paulo - Brazil", "_installationType":"residential", "_area":"100", "_hoaMember":"n"}' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_0_8/processes/com.solarvillage.neworderpermitting.NewOrderPermitting/instances
 ```
 
 * Start a HOA Member instance
 ```
-curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '{"_name":"Daniel", "_address":"Faria_lima", "_installationType":"residential", "_area":"100", "_hoaMember":"y"}' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/processes/com.solarvillage.neworderpermitting.NewOrderPermitting/instances
+curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '{"_name":"Daniel B. G. Goncalves", "_address":"Av. Brigadeiro Faria Lima, 3900 - Sao Paulo - Brazil", "_installationType":"residential", "_area":"100", "_hoaMember":"y"}' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/processes/com.solarvillage.neworderpermitting.NewOrderPermitting/instances
 ```
 
 * Signal for a meeting request with a sales representative (within 2 minutes after creating a HOA Member instance)
 ```
-curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '"meetingRequest"' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_0_8/processes/instances/14/signal/meetingRequest
+curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" --user jboss:bpms -d '"meetingRequest"' http://localhost:8080/kie-server/services/rest/server/containers/neworderpermitting_x_y/processes/instances/<ID>/signal/meetingRequest
 ```
 
 * Sales1: claim a task
