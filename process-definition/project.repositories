@@ -3,32 +3,8 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>local</id>
-        <url>/home/jboss/.m2/repository</url>
-        <source>LOCAL</source>
-      </metadata>
-    </repository>
-    <repository>
-      <include>true</include>
-      <metadata>
-        <id>central</id>
-        <url>https://repo.maven.apache.org/maven2</url>
-        <source>PROJECT</source>
-      </metadata>
-    </repository>
-    <repository>
-      <include>true</include>
-      <metadata>
         <id>jboss-plugins</id>
         <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
-        <source>SETTINGS</source>
-      </metadata>
-    </repository>
-    <repository>
-      <include>true</include>
-      <metadata>
-        <id>enterprise</id>
-        <url>http://maven.repository.redhat.com/techpreview/all/</url>
         <source>SETTINGS</source>
       </metadata>
     </repository>
@@ -43,8 +19,32 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>jboss</id>
+        <id>local</id>
+        <url>/home/jboss/.m2/repository</url>
+        <source>LOCAL</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>jboss-snapshot</id>
         <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+        <source>SETTINGS</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+        <source>PROJECT</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>enterprise</id>
+        <url>http://maven.repository.redhat.com/techpreview/all/</url>
         <source>SETTINGS</source>
       </metadata>
     </repository>
@@ -59,7 +59,7 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>jboss-snapshot</id>
+        <id>jboss</id>
         <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
         <source>SETTINGS</source>
       </metadata>
