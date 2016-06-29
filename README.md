@@ -21,8 +21,8 @@ User Configuration
 ==================
 * Create the following users:
 ```
-sales1
-executive1
+sales1/redhat@123
+executive1/redhat@123
 ```
 * With the following groups:
 ```
@@ -80,7 +80,7 @@ Kie Server
 0. Name: neworderpermitting_1_0
 0. Group Name: com.solarvillage.neworderpermitting
 0. Artifact Id: process-definition
-0. Version: x.y
+0. Version: 1.0
 0. Finish
 0. Start Container
 
