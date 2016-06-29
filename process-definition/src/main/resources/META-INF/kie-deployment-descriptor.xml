@@ -8,7 +8,7 @@
     <marshalling-strategies>
         <marshalling-strategy>
             <resolver>mvel</resolver>
-            <identifier>new org.drools.persistence.jpa.marshaller.JPAPlaceholderResolverStrategy("com.solarvillage.neworderpermitting:process-definition:0.6", classLoader)</identifier>
+            <identifier>new org.drools.persistence.jpa.marshaller.JPAPlaceholderResolverStrategy("com.solarvillage.neworderpermitting:process-definition:1.0", classLoader)</identifier>
             <parameters/>
         </marshalling-strategy>
     </marshalling-strategies>
