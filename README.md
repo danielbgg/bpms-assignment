@@ -1,6 +1,9 @@
 # bpms-assignment
 GPTE Red Hat BPMS Suite 6.3 Advanced Process Development Assignment
 
+	<p align="center"><img src="/files/png/bpmn2.png?raw=true"></p>
+
+
 Installation
 ============
 0. Download the [gpte-bpms-advanced-630.vdi](https://drive.google.com/open?id=0B8mmXW6hJKdiaVpndWxFV3Nmbkk) VirtualBox image
