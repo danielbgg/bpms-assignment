@@ -1,5 +1,4 @@
-# bpms-assignment
-GPTE Red Hat BPMS Suite 6.3 Advanced Process Development Assignment
+# GPTE Red Hat BPMS Suite 6.3 Advanced Process Development Assignment
 <p align="center"><img src="/files/png/bpmn2.png?raw=true"></p>
 
 
